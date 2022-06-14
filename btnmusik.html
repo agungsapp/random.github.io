@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar btn musik</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 600px;
+            background-color: blueviolet;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            margin-top: 1rem;
+            border-radius: 10px 10px 0 0 ;
+        }
+        button {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.pinimg.com/originals/66/a3/73/66a37339ebc8e547fa781c5af97703f5.gif" alt="pentol">
+        <button id="mau" onclick="mau()">mau</button>
+        <button id="gamau" onclick="gamau(this)" onmouseover="gamau(this)">gamau</button>
+        <h3 id="sp"></h3>
+        <audio id="musik" src="https://dl.ymcdn.site/8a1473f8319552922d7ccaa1acca0b71/WjQ263PVspE" controls></audio>
+    </div>
+
+    <script>
+        var music = document.getElementById("musik");
+        var supres = document.getElementById("sp");
+
+        function mau(){
+           if (music.paused) music.play();
+           supres.innerHTML = "makasih ayang heheh lopyuu";
+        }
+
+        function gamau(element) {
+            element.style.position = "absolute";
+      element.style.left = `${Math.floor(Math.random() * 90)}%`;
+      element.style.top = `${Math.floor(Math.random() * 90)}%`;
+
+            supres.innerHTML = "heh gaboleh pencet itu plisss";
+        }
+    </script>
+</body>
+</html>

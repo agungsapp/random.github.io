@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" content="notranslate">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math random dan math floor </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <style>
+        body {
+            background-color: #2e2e2e;
+            padding: 10px;
+        }
+
+        .container {
+            width: 300px;
+            height: 500px;
+            background-color: rgb(251, 149, 137);
+            margin: 3rem auto;
+            padding: 25px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            position: relative;
+            text-align: center;
+
+        }
+
+        .tombol {
+            position: absolute;
+            bottom: 10%;
+            left: 15%;
+        }
+
+        button {
+            margin-left: 2rem;
+        }
+
+        spann {
+            text-decoration: underline;
+            font-style: italic;
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        h4 {
+            margin-top: 2rem;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .haiayang {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Tebak Namanya : <br> <br>
+            <spann id="hasil"></spann>
+        </h3>
+        <div id="ayanghai" class="haiayang">
+            <h4>Semangat Ayang</h4>
+            <img id="imgay" src="" alt="">
+        </div>
+        <div class="tombol">
+            <input class="btn btn-primary text-uppercase fw-bold" type="submit" value="Refresh"
+                onClick="document.location.reload(true)">
+            <button class="btn btn-primary text-uppercase fw-bold" id="btn_acak" onclick="acak()">acak</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var oke = document.getElementById("hasil");
+        var x = Math.floor(Math.random() * 98);
+        var latin = ["oryza sativa", "zea mays", "canna edulis", "allium cepa", "citrus maxima", "canca pepaya",
+            "annona muricata", "rincinus communis", "citrus hitrix", "cocos nucifera", "piper nigrum",
+            "vigna radiata", "pisum sativum", "citrus limon", "cucumis melo", "canabis sativa", "michelia alba",
+            "michelia champeca", "vigna sinensis", "vigna mungo", "palmae", "alamanda cathartica",
+            "salacca zalacca", "santalum album", "iri tectorum", "pometia pinnata", "camelia sinensis",
+            "annanas comucus", "vitis viniferea", "annona squamosa", "cucumis sativus", "brassica rapa",
+            "pandanus tecturius", "dahlia pinnnata", "heliantus annus", "gnetum gnemon", "cananga odorata",
+            "nerium odorum", "melia indica", "saraca indica", "zapota", "piper betle", "arenga pinnata",
+            "durio ziberthinus", "purnica granatum", "avverhoa belimbi", "pyrus malus", "aglaia odorata",
+            "pisidium guajava",
+            // loop
+            "oryza sativa", "zea mays", "canna edulis", "allium cepa", "citrus maxima", "canca pepaya",
+            "annona muricata", "rincinus communis", "citrus hitrix", "cocos nucifera", "piper nigrum",
+            "vigna radiata", "pisum sativum", "citrus limon", "cucumis melo", "canabis sativa", "michelia alba",
+            "michelia champeca", "vigna sinensis", "vigna mungo", "palmae", "alamanda cathartica",
+            "salacca zalacca", "santalum album", "iri tectorum", "pometia pinnata", "camelia sinensis",
+            "annanas comucus", "vitis viniferea", "annona squamosa", "cucumis sativus", "brassica rapa",
+            "pandanus tecturius", "dahlia pinnnata", "heliantus annus", "gnetum gnemon", "cananga odorata",
+            "nerium odorum", "melia indica", "saraca indica", "zapota", "piper betle", "arenga pinnata",
+            "durio ziberthinus", "purnica granatum", "avverhoa belimbi", "pyrus malus", "aglaia odorata",
+            "pisidium guajava",
+        ];
+        var image = [
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_11.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_3.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_12.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_13.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_18.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_27.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_24.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_21.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_7.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_4.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_5.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://64.media.tumblr.com/bd9db752e266bf4feff1f2930c565572/526db09cb53abf88-16/s250x250_c1/92b7643f2ae3a94f5f53b5cad91d11e1acc08e44.gifv",
+            // loop
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_11.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_3.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_12.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_13.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_18.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_27.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_24.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_21.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_7.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_4.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-pentol-gif/sticker_5.gif?afb050261cc5640e21ce2eb44043c17a",
+            "https://64.media.tumblr.com/bd9db752e266bf4feff1f2930c565572/526db09cb53abf88-16/s250x250_c1/92b7643f2ae3a94f5f53b5cad91d11e1acc08e44.gifv"
+        ]
+
+        // function timedRefresh(timeoutPeriod) {
+        //     setTimeout("location.reload(true);", timeoutPeriod);
+        // }
+        var img = Math.floor(Math.random() * 24);
+
+        // window.onload = timedRefresh(3000);
+
+        function acak() {
+            oke.innerHTML = latin[x];
+
+            var hai = document.getElementById('ayanghai');
+            hai.style.opacity = "1";
+            document.getElementById("imgay").src = image[img];
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+<!-- math random untuk menghasilkan angka random 0(inklusif) dan 1(ekslusif) -->
+<!-- math floor untuk membulatkan angka math random ke bawah -->
+<!-- contoh syntax math.random() -->
+<!-- math.ramdom() * 10 // untuk hasil 0 - di bawah 10 -->
+<!-- math.floor(math.random() * 10) // untuk membulatkan angka hasil random 0- 10 -->
